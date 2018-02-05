@@ -1,0 +1,15 @@
+dataSource:"db:/ma_hr/dittescopiriclassificazioni",
+extendsID:"E1B6951E-8C22-4464-9B19-707548D2B2DE",
+items:[
+{
+height:480,
+partType:5,
+typeid:19,
+uuid:"4E86C806-CC23-48D2-842A-61EF8DF81475"
+}
+],
+name:"hrr_dettaglioretributivo_scopiriclassificazioni",
+size:"400,480",
+styleName:"leaf_style",
+typeid:3,
+uuid:"9E00D8A0-2BD6-4010-A803-DC2F2E5C3E95"
