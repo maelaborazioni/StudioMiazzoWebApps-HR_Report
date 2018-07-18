@@ -168,7 +168,7 @@ function updateMultipleEmployees(records)
 		var _currTabIdx = elements.dipendenti_tabless.tabIndex
 		var _formObj = forms[elements.dipendenti_tabless.getTabFormNameAt(_currTabIdx)]
 		
-		/** @type {JSFoundset<db:/ma_anagrafiche/lavoratori>} */
+		/** @type {JSFoundSet<db:/ma_anagrafiche/lavoratori>} */
 		var _employeesFs = _formObj.foundset;//databaseManager.getFoundSet(globals.Server.MA_HR, 'lavoratori')
 
 		if(_employeesFs.find())
@@ -267,7 +267,7 @@ function filterScopo(fs)
 	{
 		var scopiIds = [];
 
-		/** @type {JSFoundset<db:/ma_hr/dittescopiriclassificazioni>} */
+		/** @type {JSFoundSet<db:/ma_hr/dittescopiriclassificazioni>} */
 		var scopiRiclassificazioniFs = databaseManager.getFoundSet(globals.Server.MA_HR, 'dittescopiriclassificazioni');
 		if(scopiRiclassificazioniFs && scopiRiclassificazioniFs.find())
 		{
@@ -307,7 +307,7 @@ function updateScopiRiclassificazioni(records)
 {
 	if(records.length > 0)
 	{		
-		/** @type {JSFoundset<db:/ma_hr/dittescopiriclassificazioni>} */
+		/** @type {JSFoundSet<db:/ma_hr/dittescopiriclassificazioni>} */
 		var _scopiRiclassificazioniFs = databaseManager.getFoundSet(globals.Server.MA_HR, 'dittescopiriclassificazioni')
 		if(_scopiRiclassificazioniFs.find())
 		{
@@ -618,7 +618,7 @@ function selectAllEmployees(event)
 {
 	var fs = forms[elements.dipendenti_tabless.getTabFormNameAt(1)].foundset;
 	
-	/** @type {JSFoundset<db:/ma_anagrafiche/lavoratori>} */
+	/** @type {JSFoundSet<db:/ma_anagrafiche/lavoratori>} */
 	var _employeesFs = filterEmployees(fs.duplicateFoundSet());
 	if (_employeesFs && _employeesFs.find())
 	{

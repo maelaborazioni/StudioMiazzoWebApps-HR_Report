@@ -142,7 +142,7 @@ function filterScopo(_foundset)
  */
 function filterTipologia(fs)
 {
-	/** @type {JSFoundset<db:/ma_hr/dittescopiriclassificazioni>} */
+	/** @type {JSFoundSet<db:/ma_hr/dittescopiriclassificazioni>} */
 	var scopiriclassificazioniFs = databaseManager.getFoundSet(globals.Server.MA_HR, 'dittescopiriclassificazioni');
 	if(scopiriclassificazioniFs && scopiriclassificazioniFs.find())
 	{
@@ -295,7 +295,7 @@ function selectAllTypes(event)
 	vTipologiaId = null;
 	vTipologiaCode = '';
 	
-	/** @type {JSFoundset<db:/ma_hr/dittescopiriclassificazioni>} */
+	/** @type {JSFoundSet<db:/ma_hr/dittescopiriclassificazioni>} */
 	var scopiriclassificazioniFs = databaseManager.getFoundSet(globals.Server.MA_HR, 'dittescopiriclassificazioni');
 	if(scopiriclassificazioniFs && scopiriclassificazioniFs.find())
 	{
@@ -337,7 +337,7 @@ function unselectAllTypes(event)
  */
 function getTypes(scopoId)
 {
-	/** @type {JSFoundset<db:/ma_hr/tabtipologieelementi>} */
+	/** @type {JSFoundSet<db:/ma_hr/tabtipologieelementi>} */
 	var tipologieFs = databaseManager.getFoundSet(globals.Server.MA_HR, 'tabtipologieelementi');
 	if(tipologieFs.find())
 	{

@@ -65,7 +65,7 @@ function esportaPrivacySicurezza(report, reportName, opType)
 
 		if(employer)
 		{
-			/** @type {JSFoundset<db:/ma_anagrafiche/ditte>} */
+			/** @type {JSFoundSet<db:/ma_anagrafiche/ditte>} */
 			var dittaFs = databaseManager.getFoundSet(globals.Server.MA_ANAGRAFICHE, globals.Table.DITTE);
 			if(dittaFs && dittaFs.find())
 			{

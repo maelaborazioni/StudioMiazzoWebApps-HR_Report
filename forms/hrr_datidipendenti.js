@@ -176,7 +176,7 @@ function updateMultipleEmployees(records)
 		var _currTabIdx = elements.dipendenti_tabless.tabIndex
 		var _formObj = forms[elements.dipendenti_tabless.getTabFormNameAt(_currTabIdx)]
 		
-		/** @type {JSFoundset<db:/ma_anagrafiche/lavoratori>} */
+		/** @type {JSFoundSet<db:/ma_anagrafiche/lavoratori>} */
 		var _employeesFs = _formObj.foundset;
 		if(_employeesFs.find())
 		{
@@ -219,7 +219,7 @@ function filterEmployees(_foundset)
 		/**
 		 * Use the converted company's ID instead of the customer's
 		 */
-		/** @type {JSFoundset<db:/ma_anagrafiche/v_ditte_cliente2sede>} */
+		/** @type {JSFoundSet<db:/ma_anagrafiche/v_ditte_cliente2sede>} */
 	 	_foundset.addFoundSetFilterParam('idditta','=', vEmployerID, 'employeesFilter');
 		_foundset.addFoundSetFilterParam('assunzione','^||<=',vDateTo || globals.TODAY,'hiredEmployeesFilter')
 		if(!vIncludeStoppedEmployees)
@@ -461,7 +461,7 @@ function setExportNone(event) {
  */
 function selectAllEmployees(event) 
 {
-	/** @type {JSFoundset<db:/ma_anagrafiche/lavoratori>} */
+	/** @type {JSFoundSet<db:/ma_anagrafiche/lavoratori>} */
 	var _employeesFs = forms[elements.dipendenti_tabless.getTabFormNameAt(1)].foundset
 	_employeesFs.clear();
 	
@@ -673,7 +673,7 @@ function onDataChangeSelection(oldValue, newValue, event)
  */
 function onDataChangeCodDitta(oldValue, newValue, event) 
 {
-	/** @type {JSFoundset<db:/ma_anagrafiche/ditte>} */
+	/** @type {JSFoundSet<db:/ma_anagrafiche/ditte>} */
 	var fs = databaseManager.getFoundSet(globals.nav.program[lkpDitta].server_name, globals.nav.program[lkpDitta].table_name);	//databaseManager.getFoundSet(globals.Server.MA_ANAGRAFICHE, globals.Table.DITTE);
 	if(fs && fs.find())
 	{
